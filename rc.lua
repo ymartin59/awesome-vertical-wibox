@@ -282,6 +282,8 @@ globalkeys = awful.util.table.join(
        "Swap with previous window"),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev, "View previous tag"),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext, "View next tag"),
+    awful.key({ modkey,           }, "Down",   awful.tag.viewprev, "View previous tag"),
+    awful.key({ modkey,           }, "Up",  awful.tag.viewnext, "View next tag"),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore, "View previously selected tag set"),
 
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end,
