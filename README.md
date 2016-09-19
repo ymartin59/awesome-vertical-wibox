@@ -1,6 +1,6 @@
 # awesome-vertical-wibox
 
-Always used a vertical panel in Gnome 2, here is an initial setup of Awesome VM
+Always used a vertical panel in Gnome 2, here is an initial setup of Awesome WM
 3.5 base on Debian package with a vertical wibox.
 
 Standard key bindings are documented with keydoc module.
