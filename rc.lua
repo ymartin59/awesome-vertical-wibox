@@ -341,6 +341,7 @@ clientkeys = awful.util.table.join(
 -- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, 9 do
     globalkeys = awful.util.table.join(globalkeys,
+        keydoc.group("Tag management"),
         -- View tag only.
         awful.key({ modkey }, "#" .. i + 9,
                   function ()
@@ -349,7 +350,8 @@ for i = 1, 9 do
                         if tag then
                            awful.tag.viewonly(tag)
                         end
-                  end),
+                  end,
+                  i == 5 and "Display only this tag" or nil),
         -- Toggle tag.
         awful.key({ modkey, "Control" }, "#" .. i + 9,
                   function ()
@@ -358,7 +360,8 @@ for i = 1, 9 do
                       if tag then
                          awful.tag.viewtoggle(tag)
                       end
-                  end),
+                  end,
+                  i == 5 and "Toggle display of this tag" or nil),
         -- Move client to tag.
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
                   function ()
@@ -368,7 +371,8 @@ for i = 1, 9 do
                               awful.client.movetotag(tag)
                           end
                      end
-                  end),
+                  end,
+                  i == 5 and "Move window to this tag" or nil),
         -- Toggle tag.
         awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
                   function ()
@@ -378,7 +382,8 @@ for i = 1, 9 do
                               awful.client.toggletag(tag)
                           end
                       end
-                  end))
+                  end,
+                  i == 5 and "Toggle this tag on this window" or nil))
 end
 
 clientbuttons = awful.util.table.join(
