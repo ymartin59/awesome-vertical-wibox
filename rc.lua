@@ -500,4 +500,9 @@ awful.util.spawn_with_shell("/usr/lib/policykit-1-gnome/polkit-gnome-authenticat
 awful.util.spawn_with_shell("/usr/bin/gnome-keyring-daemon")
 awful.util.spawn_with_shell("/usr/bin/nm-applet")
 awful.util.spawn_with_shell("/usr/bin/parcellite")
+
+-- package volumeicon-alsa configured with gnome-alsamixer
 awful.util.spawn_with_shell("/usr/bin/volumeicon")
+
+-- package xfce4-power-manager
+awful.util.spawn_with_shell("/usr/bin/xfce4-power-manager")
